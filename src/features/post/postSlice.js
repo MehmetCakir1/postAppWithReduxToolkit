@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import {sub} from "date-fns"
 
-const initialState=[]
+const initialState=[...initialState,...JSON.parse(localStorage.getItem("posts"))]
     // {
     //     id: '1',
     //     title: 'Learning Redux Toolkit',
@@ -26,12 +26,12 @@ const initialState=[]
     //         rocket: 0,
     //     }
     // }
-    // [...JSON.parse(localStorage.getItem("posts"))]
+    
 
 
 const postsSlice=createSlice({
     name:"post",
-    initialState:JSON.parse(localStorage.getItem("posts")),
+    initialState,
     reducers:{
         addPost(state,{payload}){
             state.push(payload)
