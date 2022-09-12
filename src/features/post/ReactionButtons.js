@@ -11,7 +11,7 @@ const reactionEmoji = {
 const ReactionButtons = ({ item }) => {
     const dispatch = useDispatch()
 
-    const reactionButtons = Object.entries(reactionEmoji).map(([name, emoji]) => {
+    const reactionButtons = Object.entries(reactionEmoji)?.map(([name, emoji]) => {
         return (
             <button
                 key={name}

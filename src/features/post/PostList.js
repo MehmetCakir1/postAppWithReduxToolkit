@@ -17,7 +17,7 @@ const PostList = () => {
         <AddPost/>
         <h1 className="post-header text-center border-1 border border-secondary py-2 m-auto mb-3">POSTS</h1>
         <div className="m-auto container d-flex justify-content-center align-items-center gap-3 flex-wrap">
-            {orderedPosts.map((item)=>{
+            {orderedPosts?.map((item)=>{
                 return(
                     <div key={item.id}>
                         <SinglePost  item={item}/>
