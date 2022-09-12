@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import {sub} from "date-fns"
 
-const initialState=[].concat(JSON.parse(localStorage.getItem("posts")))
+let initialState=[]
     // {
     //     id: '1',
     //     title: 'Learning Redux Toolkit',
@@ -27,7 +27,11 @@ const initialState=[].concat(JSON.parse(localStorage.getItem("posts")))
     //     }
     // }
     
-
+if(localStorage.getItem("posts")){
+    initialState=initialState.concat(JSON.parse(localStorage.getItem("posts")))
+}else{
+    initialState=[]
+}
 
 const postsSlice=createSlice({
     name:"post",
