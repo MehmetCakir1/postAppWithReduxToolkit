@@ -31,7 +31,7 @@ const initialState=[]
 
 const postsSlice=createSlice({
     name:"post",
-    initialState:[...JSON.parse(localStorage.getItem("posts"))],
+    initialState:JSON.parse(localStorage.getItem("posts")),
     reducers:{
         addPost(state,{payload}){
             state.push(payload)
