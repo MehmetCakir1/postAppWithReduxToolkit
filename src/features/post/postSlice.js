@@ -34,13 +34,13 @@ const postsSlice=createSlice({
     initialState:JSON.parse(localStorage.getItem("posts")),
     reducers:{
         addPost(state,{payload}){
-            state.push(payload)
+            state?.push(payload)
             localStorage.setItem("posts",JSON.stringify(state))
         },
         removePost(state,{payload}){
             // console.log(payload)
             // console.log(state);
-            state=state.filter((item)=>item.id != payload)
+            state=state?.filter((item)=>item.id != payload)
             localStorage.setItem("posts",JSON.stringify(state))
         },
         addReaction(state,{payload}){
