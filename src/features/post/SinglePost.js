@@ -10,7 +10,7 @@ const SinglePost = ({item}) => {
     <div className='card text-center p-3 py-4'>
         <h3 className='title text-center py-2 px-1'>{title}</h3>
         <p className='content text-start'>{content}</p>
-        <p className='text-start'><PostAuthor userId={userId}/></p>
+        <PostAuthor userId={userId}/>
         <p className='text-end'><TimeAgo timestamp={date}/></p>
         <div className='d-flex justify-content-center align-items-center'>
           <ReactionButtons item={item}/>
