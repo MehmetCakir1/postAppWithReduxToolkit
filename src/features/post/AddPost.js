@@ -20,19 +20,29 @@ const AddPost = () => {
           content,
           date: new Date().toISOString(),
           userId,
+          reactions: {
+            thumbsUp: 0,
+            wow: 0,
+            heart: 0,
+            rocket: 0,
+        }
         })
       );
     }
     setTitle("");
     setContent("");
   };
+
+  // useEffect(() => {
+  //   localStorage.setItem("posts", JSON.stringify(posts));
+  // }, [posts]);
   const canSave = Boolean(title) && Boolean(content) && Boolean(userId);
 
   // console.log(title);
   // console.log(userId)
   // console.log(Boolean(userId));
   return (
-    <section>
+    <section className="mt-2">
       <h2 className="text-center">Add A New Post</h2>
       <form className="m-auto d-flex flex-column justify-content-center align-items-center addForm">
         <div className=" mt-2">

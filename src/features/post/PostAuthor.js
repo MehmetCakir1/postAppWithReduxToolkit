@@ -9,9 +9,9 @@ const PostAuthor = ({userId}) => {
     // console.log(users.filter((user=>user.id)));
     // console.log(userId)
   return (
-    <span>
+    <p className="p-0 m-0 text-end">
         by <span className="fw-bold">{author ? author.name : "Unkown Author"}</span> 
-    </span>
+    </p>
   )
 }
 

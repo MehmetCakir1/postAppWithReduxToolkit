@@ -20,6 +20,13 @@ textarea{
 }
 .card{
   width:20rem;
+  box-shadow:3px 5px 5px grey;
+}
+.post-header{
+  width:80%;
+  width:25rem;
+  text-shadow:1px 1px 5px grey;
+  border-radius:60px 0px 60px 0px;
 }
 .title{
   text-overflow: ellipsis;
@@ -30,4 +37,17 @@ textarea{
   text-overflow: ellipsis;
   overflow: hidden;     
   white-space: nowrap;
+}
+.details{
+  width:80% !important;
+}
+
+.details-content{
+  word-wrap:break-word!important;
+  text-indent:30px;
+  height:15rem !important;
+  overflow:auto;
+}
+.btn-div button{
+  width:10rem;
 }
