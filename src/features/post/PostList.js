@@ -10,7 +10,7 @@ const PostList = () => {
     // console.log(posts)
 
     
-    const orderedPosts=posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+    const orderedPosts=posts?.slice().sort((a, b) => b.date.localeCompare(a.date))
     // console.log(orderedPosts)
   return (
     <div>
