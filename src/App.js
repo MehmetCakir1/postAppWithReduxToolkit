@@ -11,10 +11,8 @@ const App = () => {
   return (
     <div>
       <Provider store={store}>
-      <AppRouter>
-        <PostList/>
+        <AppRouter/>
         <ToastContainer/>
-        </AppRouter>
       </Provider>
     </div>
   )
